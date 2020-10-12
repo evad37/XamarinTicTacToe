@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TicTacToe.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="Crimson" Padding="14" CornerRadius="0">
+            <Label Text="Tic-Tac-Toe" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <ActivityIndicator x:Name="loadActivityIndicator" IsRunning="true" Color="Crimson" Margin="10"/>
+        <Label x:Name="gameNumberLabel" FontSize="Caption" Margin="10,0" />
+        <Grid Margin="10,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Button x:Name="btn0_0" Grid.Row="0" Grid.Column="0" FontSize="Title" FontAttributes="Bold" Clicked="BoardButton_Clicked"/>
+            <Button x:Name="btn0_1" Grid.Row="0" Grid.Column="1" FontSize="Title" FontAttributes="Bold" Clicked="BoardButton_Clicked"/>
+            <Button x:Name="btn0_2" Grid.Row="0" Grid.Column="2" FontSize="Title" FontAttributes="Bold" Clicked="BoardButton_Clicked"/>
+            <Button x:Name="btn1_0" Grid.Row="1" Grid.Column="0" FontSize="Title" FontAttributes="Bold" Clicked="BoardButton_Clicked"/>
+            <Button x:Name="btn1_1" Grid.Row="1" Grid.Column="1" FontSize="Title" FontAttributes="Bold" Clicked="BoardButton_Clicked"/>
+            <Button x:Name="btn1_2" Grid.Row="1" Grid.Column="2" FontSize="Title" FontAttributes="Bold" Clicked="BoardButton_Clicked"/>
+            <Button x:Name="btn2_0" Grid.Row="2" Grid.Column="0" FontSize="Title" FontAttributes="Bold" Clicked="BoardButton_Clicked"/>
+            <Button x:Name="btn2_1" Grid.Row="2" Grid.Column="1" FontSize="Title" FontAttributes="Bold" Clicked="BoardButton_Clicked"/>
+            <Button x:Name="btn2_2" Grid.Row="2" Grid.Column="2" FontSize="Title" FontAttributes="Bold" Clicked="BoardButton_Clicked"/>
+        </Grid>
+        <Grid Margin="10" RowSpacing="0" Padding="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label x:Name="humanPlayerLabel" Text="Human Player" FontSize="Medium" HorizontalOptions="Center"/>
+            <Label x:Name="computerPlayerLabel" Grid.Column="1" Text="Computer Player" FontSize="Medium" HorizontalOptions="Center"/>
+            <Label x:Name="humanPointsNumberLabel" Grid.Row="1" HorizontalOptions="Center" Text="-" FontSize="Title"/>
+            <Label x:Name="computerPointsNumberLabel" Grid.Row="1" Grid.Column="1" HorizontalOptions="Center" Text="-" FontSize="Title"/>
+            <Label x:Name="humanPointsTextLabel" Grid.Row="2" HorizontalOptions="Center" Text="points" FontSize="Caption"/>
+            <Label x:Name="computerPointsTextLabel" Grid.Row="2" Grid.Column="1" HorizontalOptions="Center" Text="points" FontSize="Caption"/>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
